@@ -1,0 +1,471 @@
+{
+    "cidade": {
+        "nome": "BELÉM - PA",
+        "eleitorado": "1.234.567",
+        "metaInfo": "DADOS AUDITADOS: 2022 / 2024"
+    },
+    "presidente2022": {
+        "titulo": "PRESIDENTE 2022 (2º TURNO EM BELÉM)",
+        "candidatos": [
+            {
+                "posicao": 1,
+                "nome": "LULA",
+                "partido": "PT",
+                "votos": "431.858",
+                "percentual": "50,28%",
+                "eleito": true
+            },
+            {
+                "posicao": 2,
+                "nome": "JAIR BOLSONARO",
+                "partido": "PL",
+                "votos": "427.051",
+                "percentual": "49,72%",
+                "eleito": false
+            }
+        ]
+    },
+    "governador2022": {
+        "titulo": "GOVERNADOR 2022 (VOTOS BELÉM)",
+        "candidatos": [
+            {
+                "posicao": 1,
+                "nome": "HELDER BARBALHO",
+                "partido": "MDB",
+                "votos": "582.468",
+                "percentual": "71,15%",
+                "eleito": true
+            },
+            {
+                "posicao": 2,
+                "nome": "ZEQUINHA MARINHO",
+                "partido": "PL",
+                "votos": "200.325",
+                "percentual": "24,47%",
+                "eleito": false
+            },
+            {
+                "posicao": 3,
+                "nome": "ADOLFO OLIVEIRA",
+                "partido": "PSOL",
+                "votos": "24.509",
+                "percentual": "2,99%",
+                "eleito": false
+            },
+            {
+                "posicao": 4,
+                "nome": "MAJOR MARCONY",
+                "partido": "SD",
+                "votos": "3.614",
+                "percentual": "0,44%",
+                "eleito": false
+            }
+        ]
+    },
+    "prefeito2024": {
+        "titulo": "PREFEITO 2024 (1º TURNO)",
+        "candidatos": [
+            {
+                "posicao": 1,
+                "nome": "IGOR NORMANDO",
+                "partido": "MDB",
+                "votos": "359.904",
+                "percentual": "44,89%",
+                "eleito": true
+            },
+            {
+                "posicao": 2,
+                "nome": "EDER MAURO",
+                "partido": "PL",
+                "votos": "252.455",
+                "percentual": "31,48%",
+                "eleito": false
+            },
+            {
+                "posicao": 3,
+                "nome": "EDMILSON RODRIGUES",
+                "partido": "PSOL",
+                "votos": "78.401",
+                "percentual": "9,78%",
+                "eleito": false
+            },
+            {
+                "posicao": 4,
+                "nome": "THIAGO ARAÚJO",
+                "partido": "REP",
+                "votos": "62.271",
+                "percentual": "7,77%",
+                "eleito": false
+            }
+        ]
+    },
+    "vereadores2024": {
+        "titulo": "VEREADORES 2024 (TOP 15 OFICIAL)",
+        "candidatos": [
+            {
+                "posicao": 1,
+                "nome": "SILVANE FERRAZ",
+                "partido": "MDB",
+                "votos": "21.561",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 2,
+                "nome": "JOHN WAYNE",
+                "partido": "MDB",
+                "votos": "14.299",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 3,
+                "nome": "NENÉM ALBUQ.",
+                "partido": "MDB",
+                "votos": "12.566",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 4,
+                "nome": "TULIO NEVES",
+                "partido": "PSD",
+                "votos": "12.449",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 5,
+                "nome": "PABLO FARAH",
+                "partido": "MDB",
+                "votos": "12.259",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 6,
+                "nome": "JOÃO COELHO",
+                "partido": "PDT",
+                "votos": "12.026",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 7,
+                "nome": "ÁGATHA BARRA",
+                "partido": "PL",
+                "votos": "11.212",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 8,
+                "nome": "MAYKY VILAÇA",
+                "partido": "PL",
+                "votos": "10.714",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 9,
+                "nome": "BIECO",
+                "partido": "MDB",
+                "votos": "9.540",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 10,
+                "nome": "RENAN NORMANDO",
+                "partido": "MDB",
+                "votos": "9.495",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 11,
+                "nome": "RAQUEL ANIMAIS",
+                "partido": "PDT",
+                "votos": "9.156",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 12,
+                "nome": "GLEISSON",
+                "partido": "PSB",
+                "votos": "9.067",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 13,
+                "nome": "FÁBIO SOUZA",
+                "partido": "MDB",
+                "votos": "8.668",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 14,
+                "nome": "RONI GÁS",
+                "partido": "MDB",
+                "votos": "8.602",
+                "status": "E",
+                "eleito": true
+            },
+            {
+                "posicao": 15,
+                "nome": "MARCOS XAVIER",
+                "partido": "REP",
+                "votos": "8.590",
+                "status": "E",
+                "eleito": true
+            }
+        ]
+    },
+    "deputadoFederal2022": {
+        "titulo": "FEDERAL (VOTOS BELÉM 2022)",
+        "candidatos": [
+            {
+                "posicao": 1,
+                "nome": "EDER MAURO",
+                "partido": "PL",
+                "votos": "67.184",
+                "percentual": "8,32%",
+                "eleito": true
+            },
+            {
+                "posicao": 2,
+                "nome": "VAVÁ MARTINS",
+                "partido": "REP",
+                "votos": "38.701",
+                "percentual": "4,79%",
+                "eleito": false
+            },
+            {
+                "posicao": 3,
+                "nome": "ELCIONE",
+                "partido": "MDB",
+                "votos": "37.425",
+                "percentual": "4,64%",
+                "eleito": true
+            },
+            {
+                "posicao": 4,
+                "nome": "MARINOR BRITO",
+                "partido": "PSOL",
+                "votos": "34.250",
+                "percentual": "4,24%",
+                "eleito": false
+            },
+            {
+                "posicao": 5,
+                "nome": "VIVI REIS",
+                "partido": "PSOL",
+                "votos": "29.955",
+                "percentual": "3,71%",
+                "eleito": false
+            },
+            {
+                "posicao": 6,
+                "nome": "EGUCHI",
+                "partido": "PL",
+                "votos": "28.248",
+                "percentual": "3,50%",
+                "eleito": false
+            },
+            {
+                "posicao": 7,
+                "nome": "ALESSANDRA HABER",
+                "partido": "MDB",
+                "votos": "28.007",
+                "percentual": "3,47%",
+                "eleito": true
+            },
+            {
+                "posicao": 8,
+                "nome": "CÁSSIO ANDRADE",
+                "partido": "PSB",
+                "votos": "24.788",
+                "percentual": "3,07%",
+                "eleito": false
+            },
+            {
+                "posicao": 9,
+                "nome": "RENILCE NICODEMOS",
+                "partido": "MDB",
+                "votos": "24.673",
+                "percentual": "3,06%",
+                "eleito": true
+            },
+            {
+                "posicao": 10,
+                "nome": "CELSO SABINO",
+                "partido": "UNIÃO",
+                "votos": "23.147",
+                "percentual": "2,87%",
+                "eleito": true
+            }
+        ],
+        "suplentes": [
+            {
+                "nome": "Vavá Martins",
+                "partido": "REP",
+                "votos": "38.701"
+            },
+            {
+                "nome": "Marinor Brito",
+                "partido": "PSOL",
+                "votos": "34.250"
+            },
+            {
+                "nome": "Vivi Reis",
+                "partido": "PSOL",
+                "votos": "29.955"
+            },
+            {
+                "nome": "Delegado Eguchi",
+                "partido": "PL",
+                "votos": "28.248"
+            },
+            {
+                "nome": "Cássio Andrade",
+                "partido": "PSB",
+                "votos": "24.788"
+            }
+        ]
+    },
+    "deputadoEstadual2022": {
+        "titulo": "ESTADUAL (VOTOS BELÉM 2022)",
+        "candidatos": [
+            {
+                "posicao": 1,
+                "nome": "ZECA PIRÃO",
+                "partido": "MDB",
+                "votos": "40.878",
+                "percentual": "5,03%",
+                "eleito": true
+            },
+            {
+                "posicao": 2,
+                "nome": "ROGÉRIO BARRA",
+                "partido": "PL",
+                "votos": "28.822",
+                "percentual": "3,55%",
+                "eleito": true
+            },
+            {
+                "posicao": 3,
+                "nome": "FÁBIO FREITAS",
+                "partido": "REP",
+                "votos": "25.787",
+                "percentual": "3,17%",
+                "eleito": true
+            },
+            {
+                "posicao": 4,
+                "nome": "NILTON NEVES",
+                "partido": "PSD",
+                "votos": "24.781",
+                "percentual": "3,05%",
+                "eleito": true
+            },
+            {
+                "posicao": 5,
+                "nome": "IGOR NORMANDO",
+                "partido": "PODE",
+                "votos": "24.479",
+                "percentual": "3,01%",
+                "eleito": true
+            },
+            {
+                "posicao": 6,
+                "nome": "ADRIANO COELHO",
+                "partido": "PDT",
+                "votos": "22.617",
+                "percentual": "2,78%",
+                "eleito": true
+            },
+            {
+                "posicao": 7,
+                "nome": "LÍVIA DUARTE",
+                "partido": "PSOL",
+                "votos": "20.749",
+                "percentual": "2,55%",
+                "eleito": true
+            },
+            {
+                "posicao": 8,
+                "nome": "GLEISSON",
+                "partido": "PSB",
+                "votos": "19.150",
+                "percentual": "2,36%",
+                "eleito": true
+            },
+            {
+                "posicao": 9,
+                "nome": "MARTINHO CARMONA",
+                "partido": "MDB",
+                "votos": "18.382",
+                "percentual": "2,26%",
+                "eleito": true
+            },
+            {
+                "posicao": 10,
+                "nome": "ERICK MONTEIRO",
+                "partido": "PSDB",
+                "votos": "16.516",
+                "percentual": "2,04%",
+                "eleito": true
+            }
+        ],
+        "suplentes": [
+            {
+                "nome": "Celsa",
+                "partido": "MDB",
+                "votos": "38.285"
+            },
+            {
+                "nome": "Eliel Faustino",
+                "partido": "UNIÃO",
+                "votos": "35.424"
+            },
+            {
+                "nome": "Professor Maneschy",
+                "partido": "MDB",
+                "votos": "33.711"
+            },
+            {
+                "nome": "Professora Nilse",
+                "partido": "PDT",
+                "votos": "33.568"
+            }
+        ]
+    },
+    "celsoSabino": {
+        "titulo": "CELSO SABINO NESTE MUNICÍPIO",
+        "dados": {
+            "ano2018": {
+                "votos": "38.648",
+                "percentual": null,
+                "observacao": "Ref. Histórica"
+            },
+            "ano2022": {
+                "votos": "23.147",
+                "percentual": "2,87%",
+                "observacao": null
+            },
+            "crescimento": {
+                "valor": "-40,1%",
+                "descricao": "QUEDA ACENTUADA EM BELÉM (-40,1%)",
+                "tipo": "negativo"
+            },
+            "totalAcumulado": "61.795"
+        },
+        "grafico": {
+            "altura2018": 60,
+            "altura2022": 36
+        }
+    }
+}

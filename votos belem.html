@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossiê BELÉM - PA [AUDITADO]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CONFIGURAÇÃO DE IMPRESSÃO */
+        @page { size: A4; margin: 0; }
+        * { box-sizing: border-box; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        body { margin: 0; padding: 0; background: #555; font-family: 'Roboto Condensed', sans-serif; }
+
+        .page {
+            background-color: white; width: 210mm;
+            min-height: 310mm; height: auto;
+            margin: 0 auto; padding: 10mm 12mm; position: relative;
+            display: flex; flex-direction: column; justify-content: space-between; gap: 8px;
+        }
+
+        /* CORES */
+        :root { --cs-blue: #002266; --cs-amber: #ffcc00; --cs-light: #f4f6f8; --cs-green-bg: #e6f7e9; }
+
+        /* CABEÇALHO */
+        .header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 5px solid var(--cs-amber); padding-bottom: 8px; height: 70px; }
+        .logo-box { background: var(--cs-blue); color: var(--cs-amber); font-size: 28pt; font-weight: 900; padding: 5px 18px; border: 3px solid var(--cs-amber); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+        .city-info { text-align: right; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end;}
+        .city-name { font-size: 34pt; font-weight: 900; color: var(--cs-blue); text-transform: uppercase; line-height: 0.9; margin: 0; }
+        .city-meta { background: var(--cs-blue); color: white; padding: 4px 10px; font-weight: bold; font-size: 11pt; border-radius: 4px; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* BOXES */
+        .box { border: 1px solid #bbb; border-radius: 5px; overflow: hidden; background: white; display: flex; flex-direction: column; width: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .box-header { background: var(--cs-blue); color: white; font-size: 11pt; font-weight: 900; text-transform: uppercase; padding: 6px 12px; border-bottom: 3px solid var(--cs-amber); display: flex; align-items: center; gap: 10px; height: 32px; }
+
+        /* SUPLENTES */
+        .suplentes-row { background-color: #f4f6f8; border-top: 1px solid #ddd; padding: 4px 8px; font-size: 8pt; color: #333; line-height: 1.2; }
+        .suplentes-label { color: var(--cs-blue); font-weight: 900; text-transform: uppercase; margin-right: 5px; }
+
+        /* GRIDS E TABELAS */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
+        .grid-2-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+        td { padding: 3px 6px; border-bottom: 1px solid #ddd; color: #222; vertical-align: middle; }
+        tr:last-child td { border-bottom: none; }
+        .row-highlight { background: var(--cs-green-bg) !important; font-weight: bold; color: #000; }
+        .td-pos { width: 30px; text-align: center; font-weight: bold; color: #555; font-size: 9pt; background: #f9f9f9; border-right: 1px solid #eee; }
+        .td-nome { font-weight: 600; padding-left: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 170px; }
+        .td-voto { text-align: right; font-weight: 900; color: var(--cs-blue); font-family: monospace; font-size: 10.5pt; }
+
+        /* RODAPÉ CELSO SABINO */
+        .cs-area { border: 3px solid var(--cs-amber); background: linear-gradient(to right, #fff, #fffbf0); padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; border-radius: 8px; height: 95px; margin-top: 5px; flex-shrink: 0; }
+        .cs-info h3 { margin: 0 0 5px 0; color: var(--cs-blue); font-size: 13pt; text-transform: uppercase; font-weight: 900; display: flex; align-items: center; gap: 10px; }
+        .cs-data { font-size: 10.5pt; line-height: 1.4; color: #333; }
+        .cs-growth { color: #cc0000; font-weight: 900; font-size: 12pt; background: #ffe6e6; padding: 0 4px; border-radius: 3px; }
+        .chart { display: flex; align-items: flex-end; gap: 20px; height: 55px; padding-bottom: 5px; }
+        .bar-group { text-align: center; font-size: 8pt; font-weight: bold; color: #444; }
+        .bar { width: 35px; background: var(--cs-blue); border: 1px solid #001a4d; border-radius: 4px 4px 0 0; }
+        .bar.old { background: #999; border-color: #666; }
+
+        @media print { body { background: none; } .page { margin: 0; box-shadow: none; min-height: 310mm; height: auto; } }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <div class="header">
+            <div class="logo-box">CS</div>
+            <div class="city-info">
+                <h1 class="city-name">BELÉM - PA</h1>
+                <div class="city-meta">DADOS AUDITADOS: 2022 / 2024</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-header"><i class="fas fa-landmark"></i> PRESIDENTE 2022 (2º TURNO EM BELÉM)</div>
+            <table>
+                <tr class="row-highlight">
+                    <td class="td-pos">1º</td><td class="td-nome">LULA (PT)</td><td class="td-voto">431.858 (50,28%)</td>
+                </tr>
+                <tr>
+                    <td class="td-pos">2º</td><td class="td-nome">JAIR BOLSONARO (PL)</td><td class="td-voto">427.051 (49,72%)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="grid-2">
+            <div class="box">
+                <div class="box-header"><i class="fas fa-user-tie"></i> GOVERNADOR 2022 (VOTOS BELÉM)</div>
+                <table>
+                    <tr class="row-highlight"><td class="td-pos">1º</td><td class="td-nome">HELDER BARBALHO (MDB)</td><td class="td-voto">582.468 (71,15%)</td></tr>
+                    <tr><td class="td-pos">2º</td><td class="td-nome">ZEQUINHA MARINHO (PL)</td><td class="td-voto">200.325 (24,47%)</td></tr>
+                    <tr><td class="td-pos">3º</td><td class="td-nome">ADOLFO OLIVEIRA (PSOL)</td><td class="td-voto">24.509 (2,99%)</td></tr>
+                    <tr><td class="td-pos">4º</td><td class="td-nome">MAJOR MARCONY (SD)</td><td class="td-voto">3.614 (0,44%)</td></tr>
+                </table>
+            </div>
+            <div class="box">
+                <div class="box-header"><i class="fas fa-building"></i> PREFEITO 2024 (1º TURNO)</div>
+                <table>
+                    <tr class="row-highlight"><td class="td-pos">1º</td><td class="td-nome">IGOR NORMANDO (MDB)</td><td class="td-voto">359.904 (44,89%)</td></tr>
+                    <tr><td class="td-pos">2º</td><td class="td-nome">EDER MAURO (PL)</td><td class="td-voto">252.455 (31,48%)</td></tr>
+                    <tr><td class="td-pos">3º</td><td class="td-nome">EDMILSON RODRIGUES (PSOL)</td><td class="td-voto">78.401 (9,78%)</td></tr>
+                    <tr><td class="td-pos">4º</td><td class="td-nome">THIAGO ARAÚJO (REP)</td><td class="td-voto">62.271 (7,77%)</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-header"><i class="fas fa-users"></i> VEREADORES 2024 (TOP 15 OFICIAL)</div>
+            <div class="grid-2-inner">
+                <table>
+                    <tr class="row-highlight"><td class="td-pos">1º</td><td class="td-nome">SILVANE FERRAZ (MDB) (E)</td><td class="td-voto">21.561</td></tr>
+                    <tr class="row-highlight"><td class="td-pos">2º</td><td class="td-nome">JOHN WAYNE (MDB) (E)</td><td class="td-voto">14.299</td></tr>
+                    <tr class="row-highlight"><td class="td-pos">3º</td><td class="td-nome">NENÉM ALBUQ. (MDB) (E)</td><td class="td-voto">12.566</td></tr>
+                    <tr><td class="td-pos">4º</td><td class="td-nome">TULIO NEVES (PSD) (E)</td><td class="td-voto">12.449</td></tr>
+                    <tr><td class="td-pos">5º</td><td class="td-nome">PABLO FARAH (MDB) (E)</td><td class="td-voto">12.259</td></tr>
+                    <tr><td class="td-pos">6º</td><td class="td-nome">JOÃO COELHO (PDT) (E)</td><td class="td-voto">12.026</td></tr>
+                    <tr><td class="td-pos">7º</td><td class="td-nome">ÁGATHA BARRA (PL) (E)</td><td class="td-voto">11.212</td></tr>
+                    <tr><td class="td-pos">8º</td><td class="td-nome">MAYKY VILAÇA (PL) (E)</td><td class="td-voto">10.714</td></tr>
+                </table>
+                <table>
+                    <tr><td class="td-pos">9º</td><td class="td-nome">BIECO (MDB) (E)</td><td class="td-voto">9.540</td></tr>
+                    <tr><td class="td-pos">10º</td><td class="td-nome">RENAN NORMANDO (MDB) (E)</td><td class="td-voto">9.495</td></tr>
+                    <tr><td class="td-pos">11º</td><td class="td-nome">RAQUEL ANIMAIS (PDT) (E)</td><td class="td-voto">9.156</td></tr>
+                    <tr><td class="td-pos">12º</td><td class="td-nome">GLEISSON (PSB) (E)</td><td class="td-voto">9.067</td></tr>
+                    <tr><td class="td-pos">13º</td><td class="td-nome">FÁBIO SOUZA (MDB) (E)</td><td class="td-voto">8.668</td></tr>
+                    <tr><td class="td-pos">14º</td><td class="td-nome">RONI GÁS (MDB) (E)</td><td class="td-voto">8.602</td></tr>
+                    <tr><td class="td-pos">15º</td><td class="td-nome">MARCOS XAVIER (REP) (E)</td><td class="td-voto">8.590</td></tr>
+                    <tr><td colspan="3" style="height: 33px; border:none;"></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="box">
+                <div class="box-header"><i class="fas fa-university"></i> FEDERAL (VOTOS BELÉM 2022)</div>
+                <table>
+                    <tr class="row-highlight"><td class="td-pos">1º</td><td class="td-nome">EDER MAURO (PL)</td><td class="td-voto">67.184 (8,32%)</td></tr>
+                    <tr><td class="td-pos">2º</td><td class="td-nome">VAVÁ MARTINS (REP)</td><td class="td-voto">38.701 (4,79%)</td></tr>
+                    <tr><td class="td-pos">3º</td><td class="td-nome">ELCIONE (MDB)</td><td class="td-voto">37.425 (4,64%)</td></tr>
+                    <tr><td class="td-pos">4º</td><td class="td-nome">MARINOR BRITO (PSOL)</td><td class="td-voto">34.250 (4,24%)</td></tr>
+                    <tr><td class="td-pos">5º</td><td class="td-nome">VIVI REIS (PSOL)</td><td class="td-voto">29.955 (3,71%)</td></tr>
+                    <tr><td class="td-pos">6º</td><td class="td-nome">EGUCHI (PL)</td><td class="td-voto">28.248 (3,50%)</td></tr>
+                    <tr><td class="td-pos">7º</td><td class="td-nome">ALESSANDRA HABER (MDB)</td><td class="td-voto">28.007 (3,47%)</td></tr>
+                    <tr><td class="td-pos">8º</td><td class="td-nome">CÁSSIO ANDRADE (PSB)</td><td class="td-voto">24.788 (3,07%)</td></tr>
+                    <tr><td class="td-pos">9º</td><td class="td-nome">RENILCE NICODEMOS (MDB)</td><td class="td-voto">24.673 (3,06%)</td></tr>
+                    <tr><td class="td-pos">10º</td><td class="td-nome">CELSO SABINO (UNIÃO)</td><td class="td-voto">23.147 (2,87%)</td></tr>
+                </table>
+                <div class="suplentes-row">
+                    <span class="suplentes-label">* SUPLENTES (Não Eleitos):</span>
+                       Vavá Martins | REP | 38.701 ; Marinor Brito | PSOL | 34.250 ; Vivi Reis | PSOL | 29.955 ; Delegado Eguchi | PL | 28.248 ; Cássio Andrade | PSB | 24.788
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-header"><i class="fas fa-flag"></i> ESTADUAL (VOTOS BELÉM 2022)</div>
+                <table>
+                    <tr class="row-highlight"><td class="td-pos">1º</td><td class="td-nome">ZECA PIRÃO (MDB)</td><td class="td-voto">40.878 (5,03%)</td></tr>
+                    <tr><td class="td-pos">2º</td><td class="td-nome">ROGÉRIO BARRA (PL)</td><td class="td-voto">28.822 (3,55%)</td></tr>
+                    <tr><td class="td-pos">3º</td><td class="td-nome">FÁBIO FREITAS (REP)</td><td class="td-voto">25.787 (3,17%)</td></tr>
+                    <tr><td class="td-pos">4º</td><td class="td-nome">NILTON NEVES (PSD)</td><td class="td-voto">24.781 (3,05%)</td></tr>
+                    <tr><td class="td-pos">5º</td><td class="td-nome">IGOR NORMANDO (PODE)</td><td class="td-voto">24.479 (3,01%)</td></tr>
+                    <tr><td class="td-pos">6º</td><td class="td-nome">ADRIANO COELHO (PDT)</td><td class="td-voto">22.617 (2,78%)</td></tr>
+                    <tr><td class="td-pos">7º</td><td class="td-nome">LÍVIA DUARTE (PSOL)</td><td class="td-voto">20.749 (2,55%)</td></tr>
+                    <tr><td class="td-pos">8º</td><td class="td-nome">GLEISSON (PSB)</td><td class="td-voto">19.150 (2,36%)</td></tr>
+                    <tr><td class="td-pos">9º</td><td class="td-nome">MARTINHO CARMONA (MDB)</td><td class="td-voto">18.382 (2,26%)</td></tr>
+                    <tr><td class="td-pos">10º</td><td class="td-nome">ERICK MONTEIRO (PSDB)</td><td class="td-voto">16.516 (2,04%)</td></tr>
+                </table>
+                <div class="suplentes-row">
+                    <span class="suplentes-label">* SUPLENTES (Relevantes):</span>
+                    Celsa | MDB | 38.285 ; Eliel Faustino | UNIÃO | 35.424 ; Professor Maneschy | MDB | 33.711 ; Professora Nilse | PDT | 33.568
+                </div>
+            </div>
+        </div>
+
+        <div class="cs-area">
+            <div class="cs-info">
+                <h3><i class="fas fa-chart-line"></i> CELSO SABINO NESTE MUNICÍPIO</h3>
+                <div class="cs-data">
+                    2018: <strong>38.648</strong> (Ref. Histórica) | 2022: <strong>23.147 (2,87%)</strong><br>
+                    Crescimento: <span class="cs-growth">QUEDA ACENTUADA EM BELÉM (-40,1%)</span><br>
+                    Total Acumulado: <strong>61.795 Votos</strong>
+                </div>
+            </div>
+            <div class="chart">
+                <div class="bar-group"><div class="bar old" style="height: 60px;"></div>2018</div>
+                <div class="bar-group"><div class="bar new" style="height: 36px;"></div>2022</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
